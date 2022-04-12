@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is a collection of my favourite Pokémon">
+    	<meta name="keywords" content="pokémon, entries, pokédex">
+		<link rel="icon" href="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/pokemon.png">
+		<title>My Favourite Pokémon</title>
+
+		<!-- External Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<h1>My Favourite Pokémon v3</h1>
+		<h2>Search for a Pokémon, or select a Pokéball from the left hand side to view one of my favourites.</h2>
+		<div class="search">
+			<input type="text" placeholder="Enter a Pokémon name e.g. Bulbasaur"><button id="search">Search</button>
+		</div>
+		<div class="error"></div>
+		<div class="container">
+			<div class="flexleft">
+				<ul>
+				<li id="marowak"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="crobat"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="scizor"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="houndoom"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="mudkip"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="glalie"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="trevenant"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="zeraora"><img id="favourite" src='img/pokeback.png'></li>
+				<li id="toxtricity"><img id="favourite" src='img/pokeback.png'></li>
+				</ul>
+			</div>
+			<div class="flexright">
+				<div class="imgbox">
+					<div>
+						<div class="animatedsprite">
+							<h3>3D Model</h3>
+							<img id="pokeImg" onerror="this.src = 'img/loadfail.png'" src="img/pokeball.gif" alt="Pokéball">							
+								<nav>
+									<button id="shinyButton">Toggle Shiny Sprites</button>
+									<button id="regularButton">Toggle Regular Sprites</button>
+									<button id="megaEvoButton">View Mega Evolution</button>
+								</nav>					
+						</div>
+						<div class="frontsprite">
+							<h3>Front Sprite</h3>
+							<img onerror="this.src = 'img/loadfail.png'" id="frontSprite">
+						</div>
+						<div class="backsprite">
+							<h3>Back Sprite</h3>
+							<img onerror="this.src = 'img/loadfail.png'" id="backSprite">
+						</div>
+					</div>
+				</div>
+				<div class="statbox">
+					<section class="statsection_one">
+						<div class="name">
+							<h4>Name:<div id="name"></div>
+							<span id="speciesText"></span>
+							</h4>
+						</div>
+						<div class="dexno">
+							<h4>National Dex:<div id="dexNo"></div></h4>
+						</div>
+						<div class="types">
+							<h4>Type(s):<div><img id="typeOne"><img id="typeTwo"></div></h4>
+						</div>
+					</section>
+					<section class="statsection_two">
+						<div class="dexentry">
+						<h4>Pokédex Entry:<div id="dexEntry"></div></h4>
+						<h4 class="version">Entry from: Pokémon <div class="version" id="version"></div> Version</h4>
+						</div>
+						<div class="randomentry">
+							<button id="randomEntry">Random Pokédex Entry</button>
+						</div>
+					</section>
+					<section class="statsection_three">
+						<div class="height">
+							<h4>Height:<div id="height"></div></h4>
+						</div>
+						<div class="weight">
+						<h4>Weight:<div id="weight"></div></h4>
+						</div>
+						<div class="generation">
+						<h4>Generation introduced:<div id="generation"></div></h4>
+						</div>
+						<div class="abilities">
+							<h4 class="abilitytitle">Abilities:</h4>
+							<div class="ability"><a id="abilityOne" href="#" onclick="abilityOne()"></a></div>
+							<div class="ability"><a id="abilityTwo" href="#"  onclick="abilityTwo()"></a></div>
+							<div class="ability"><a id="abilityThree" href="#" onclick="abilityThree()"></a></div>
+							<div class="hidden">Hidden: <img src="img/cancel.png"></div>
+							<div class="hidden">Hidden: <img src="img/cancel.png"></div>
+							<div class="hidden"><div id="hiddenText"></div><img id="isHidden" src="img/confirm.png"></div>
+						</div>
+					</section>
+					<section class="statsection_four">
+						<div class="basestats">
+							<h4 class="stattitle">Base Stats</h4>
+							<div class="stat">HP:<span class="statfield"></span></div>
+							<div class="stat">Attack:<span class="statfield"></span></div>
+							<div class="stat">Defence:<span class="statfield"></span></div>
+							<div class="stat">Special Attack:<span class="statfield"></span></div>
+							<div class="stat">Special Defence:<span class="statfield"></span></div>
+							<div class="stat">Speed:<span class="statfield"></span></div>
+						</div>
+					</section>
+					<section class="statsection_five">
+						<div class="movepool">
+							<h4 class="stattitle movetitle">Learnable Moves (All Generations)</h4>
+							<section class="canscroll">
+								<div class="move movelist">Move:<ul id="moveFieldA"></ul></div>
+								<div class="move move_desc">Move Details:
+									<div class="move_details">
+										<h4>Move: </h4><span id="moveName"></span>
+										<h4>PP: </h4><span id="movePP"></span>
+										<h4>Power: </h4><span id="movePower"></span>
+										<h4>Accuracy: </h4><span id="moveAcc"></span>
+										<h4>Description: </h4><p id="moveDesc"></p>
+									</div>
+								</div>
+							</section>
+						</div>
+					</section>
+					<section id="tooltipBlock" class="tooltipblock">
+						<div id="tooltipblockheader">
+							<i id="closeTooltip" class="fa-solid fa-square-xmark fa-2x"></i>
+							<h3 id="tooltipHeading"></h3>
+							<span>In-game text:</span> 
+							<p id="description"></p>
+							<span>Effect:</span>
+							<p id="effect"></p> 
+						</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="https://kit.fontawesome.com/a10b503942.js" crossorigin="anonymous"></script>
+		<h5>Made by Sean @SeanIshigami. Built with <a href="https://pokeapi.co/">PokéAPI</a></h5>
+	</body>
+
+</html>

@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Rock+Salt&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Londrina Solid', 'Roboto', 'Helvetica', sans-serif;
+  background-color: rgb(172, 172, 172);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+ }
+
+.search input {
+  width: 30%;
+  height: 40px;
+  caret-color: rgb(16, 88, 38);
+  font-family: 'Londrina Solid', 'Roboto', 'Helvetica', sans-serif;
+  font-size: 20px;
+  color: rgb(16, 88, 38);
+  position: relative;
+}
+
+.search button {
+  width: 7%;
+  height: 40px;
+  font-family: 'Londrina Solid', 'Roboto', 'Helvetica', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 24px;
+  height: 30px;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'Rock Salt', 'Roboto', 'Helvetica', sans-serif;
+  padding: 50px 0 40px 0;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  padding: 0 10px 50px 0;
+  font-size: 28px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  margin-top: 35px;
+}
+
+.container {
+  width: 95%;
+  margin: 50px auto 0 auto;
+  height: 800px;
+  display: flex;
+  border: 5px solid black;
+  background-color: white;
+}
+
+.flexleft {
+  display: flex;
+  width: 250px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flexright {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.flexright h3 {
+  padding: none;
+  align-self: flex-start;
+}
+
+.flexright span {
+  display: flex;
+  font-size: 24px;
+  margin-top: 5px;
+  padding: none;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid black;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+li{
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+}
+
+li img {
+  width: 35px;
+  height: auto;
+  position: relative;
+  top: 30px;
+}
+
+.imgbox {
+  width: 35%;
+  height: 100%;
+}
+
+.statbox {
+  width: 65%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.statbox h4 {
+  padding-top: 5px;
+  font-weight: 700;
+}
+
+/* Left Image Section */
+
+.animatedsprite {
+  height: 540px;
+  width: 100%;
+  border-right: 5px solid black;
+  overflow: hidden;
+}
+
+#pokeImg{
+  display: block;
+  height: 400px;
+  width: auto;
+  margin: 0 auto;
+  padding: 70px 0 60px 0;
+}
+
+.animatedsprite nav {
+  display: flex;
+  justify-content: space-evenly;
+  height: 40px;
+  width: 100%;
+}
+
+.animatedsprite button {
+padding: 6px 24px;
+margin: 0px 2%;
+font-size: 18px;
+font-family: 'Londrina Solid', 'Roboto', 'Helvetica', sans-serif;
+}
+
+#regularButton {
+  display: none;
+}
+
+#shinyButton {
+  display: block;
+}
+
+#megaEvoButton {
+  display: none;
+}
+
+.frontsprite, .backsprite {
+  height: 250px;
+  width: 50%;
+  float: left;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+}
+
+.animatedsprite h3, .frontsprite h3, .backsprite h3 {
+  padding: 10px 0 0 0;
+}
+
+.frontsprite img, .backsprite img {
+  width: auto;
+  height: 80%;
+} 
+
+.pokeinfo {
+  display: flex;
+  justify-content: center;
+  margin: 0 30%;
+  height: 100px;
+}
+
+/* Right Stat Section, First Row */
+
+.statsection_one {
+  border: 1px solid black;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  width: 40%;
+  border-right: 1px solid black;
+}
+
+#name {
+  margin-top: 14px;
+  font-size: 30px;
+}
+
+#speciesText {
+  padding-top: 10px;
+  font-size: 18px;
+  display: inline-block
+}
+
+.dexno {
+  width: 25%;
+  border-right: 1px solid black;
+}
+
+#dexNo {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.types {
+  width: 35%;
+}
+
+#typeOne {
+  width: 30%;
+  height: 70%;
+  margin: 15px 15% 0 5%;
+}
+
+#typeTwo {
+  width: 30%;
+  height: 70%;
+  margin: 15px 5% 0 15%;
+}
+
+.types img {
+  float: right;
+  width: auto;
+  height: 40px;
+  margin: 25px 5% 0 0;
+}
+
+/* Right Stat Section, Second Row */
+
+.statsection_two {
+  border: 1px solid black;
+  border-top: none;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.dexentry {
+  width: 75%;
+  display: flex;
+}
+
+#dexEntry {
+  width: 90%;
+  font-size: 24px;
+  margin: 27px auto 0 auto;
+}
+
+.version {
+  font-size: 22px;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+}
+
+#version {
+  text-transform: capitalize;
+}
+
+.randomentry {
+  width: 25%;
+}
+
+.randomentry button {
+  padding: 14% 17px;
+  margin: 23px 10% 0 0;
+  font-size: 22px;
+  font-family: 'Londrina Solid', 'Roboto', 'Helvetica', sans-serif;
+}
+
+/* Right Stat Section, Third Row */
+
+.statsection_three {
+  border: 1px solid black;
+  border-top: none;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.height, .weight, .generation{
+  width: 15%;
+  border-right: 1px solid black;
+}
+
+#height, #weight, #generation {
+  font-size: 30px;
+  padding-top: 30px; 
+}
+
+.abilities {
+  width: 55%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 30px 60px 40px;
+  grid-template-areas: 
+  "title title title"
+  "ability ability ability"
+  "hidden hidden hidden";
+}
+
+#abilityOne, #abilityTwo, #abilityThree {
+  font-size: 26px;
+  margin-top: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#abilityOne:hover, #abilityTwo:hover, #abilityThree:hover {
+  text-decoration: underline;
+}
+
+.abilitytitle {
+  grid-column-start: 1;
+  grid-column-end: 4; 
+}
+
+.ability {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.hidden, #hiddenText {
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+}
+
+.hidden img {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+/* Right Stat Section, Fourth Row */
+
+.statsection_four {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 100%;
+  height: 120px;
+}
+
+.basestats {
+  display: grid;
+  grid-template-columns: 16.667% 16.667% 16.667% 16.667% 16.667% 16.667%;
+  grid-template-rows: 30px 90px;
+  grid-template-areas: 
+  "title title title title title title"
+  "stats stats stats stats stats stats";
+}
+
+.stattitle {
+  grid-column-start: 1;
+  grid-column-end: 7; 
+  background-color: rgb(126, 126, 126);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.stat {
+  text-align: center;
+  border-top: 2px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.statfield {
+  display: inline-block;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+/* Right Stat Section, Fifth Row */
+
+.statsection_five {
+  border-left: 1px solid black;
+  /* border-right: 1px solid black; */
+  width: 100%;
+  height: 240px;
+}
+
+.movetitle {
+ height: 30px;
+}
+
+.canscroll {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 235px;
+  grid-template-areas: 
+  "move move move move move";
+}
+
+.move {
+  text-align: center;
+  border-top: 2px solid black;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.movelist {
+  grid-column-start: 1;
+  grid-column-end: 3; 
+}
+
+.move_desc {
+  grid-column-start: 3;
+  grid-column-end: 6; 
+}
+
+.move ul {
+  border: none;
+  overflow-y: scroll;
+}
+
+.move ul li {
+  padding: 10px 0;
+  border-right: 2px solid black;
+  text-transform: capitalize;
+}
+
+.move:last-child {
+  border-right: none;
+}
+.move_details {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 40px 40px 40px 40px 40px;
+  grid-template-areas: 
+  "move move";
+  overflow-y: scroll;
+}
+
+.move_details span {
+  font-size: 20px;
+}
+
+#moveName {
+  text-transform: capitalize;
+}
+
+#moveDesc {
+  text-align: left;
+  margin-right: 10%;
+}
+
+
+
+/* Ability tooltip */
+
+.tooltipblock {
+  visibility: hidden;
+  position: absolute;
+  height: fit-content;
+  width: 500px;
+  border: 1px solid black;
+  top: 200px;
+  left: 250px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  outline: 5px solid rgb(126, 126, 126);
+  z-index: 3;
+  background: #ffffff;
+  box-shadow: 4px 4px 6px 6px rgba(0, 0, 0, 0.75);
+  display: flex;
+}
+
+#closeTooltip {
+  float: right;
+  padding: 5px 5px 0 0;
+}
+
+#closeTooltip:hover {
+  color: rgb(255, 0, 0);
+}
+
+#closeTooltip:active {
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 1px 1px #4d0404;
+}
+
+#tooltipHeading {
+  font-size: 32px;
+  text-transform: capitalize;
+  padding: 10px 0;  
+}
+
+.tooltipblock span {
+  text-decoration: underline;
+  display: inline-block;
+  padding-bottom: 5px;
+  clear: both;
+}
+
+.tooltipblock p {
+  font-size: 18px;
+  color: black;
+}
+
+#effect {
+  padding-bottom: 10px;
+}
+
+/******************************************
+/* List Colour Styles
+/*******************************************/
+
+#crobat{
+  background: rgb(117, 92, 140);
+}
+#trevenant{
+  background: rgb(76, 186, 148);
+}
+#marowak{
+  background: rgb(81, 241, 183);
+}
+#glalie{
+  background: rgb(218, 226, 250);
+}
+#houndoom{
+  background: rgb(253, 155, 99);
+}
+#scizor{
+  background: rgb(231, 108, 104);
+}
+#mudkip{
+  background: rgb(169, 235, 254);
+}
+#zeraora{
+  background: rgb(254, 252, 100);
+}
+#toxtricity{
+  background: rgb(185, 143, 217);
+}
